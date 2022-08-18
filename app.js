@@ -1,4 +1,4 @@
-var redirect_uri = "";
+var redirect_uri = "https://aryan-kanak.github.io/spotify-track-features";
 var client_id = secrets.CLIENT_ID;
 var client_secret = secrets.CLIENT_SECRET;
 
