@@ -1,6 +1,6 @@
 var redirect_uri = "https://aryan-kanak.github.io/spotify-track-features";
-var client_id = secrets.CLIENT_ID;
-var client_secret = secrets.CLIENT_SECRET;
+var client_id = ${{ secrets.CLIENT_ID }};
+var client_secret = ${{ secrets.CLIENT_SECRET }};
 
 function onPageLoad(){
     temp_client_id = localStorage.getItem("client_id");
