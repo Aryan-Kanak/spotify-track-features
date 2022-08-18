@@ -3,8 +3,8 @@ var client_id = "cbfc4d354b014617b66a9f3225156354";
 var client_secret = "7cd9e2657ff24a09acd76fd5eabdd3e4";
 
 function onPageLoad(){
-    temp_client_id = localStorage.getItem("client_id");
-    temp_client_secret = localStorage.getItem("client_secret");
+    temp_client_id = sessionStorage.getItem("client_id");
+    temp_client_secret = sessionStorage.getItem("client_secret");
     if (temp_client_id != null) {
         client_id = temp_client_id;
     }
@@ -15,7 +15,7 @@ function onPageLoad(){
         handleRedirect();
     }
     else {
-        access_token = localStorage.getItem("access_token");
+        access_token = sessionStorage.getItem("access_token");
         if ( access_token == null ){
             $('#login').show();
             $('#stats').hide();
@@ -53,7 +53,7 @@ function fetchAccessToken( code ){
 }
 
 function refreshAccessToken(){
-    refresh_token = localStorage.getItem("refresh_token");
+    refresh_token = sessionStorage.getItem("refresh_token");
     let body = "grant_type=refresh_token";
     body += "&refresh_token=" + refresh_token;
     body += "&client_id=" + client_id;
@@ -74,11 +74,11 @@ function handleAuthorizationResponse(){
         var data = JSON.parse(this.responseText);
         if ( data.access_token != undefined ){
             access_token = data.access_token;
-            localStorage.setItem("access_token", access_token);
+            sessionStorage.setItem("access_token", access_token);
         }
         if ( data.refresh_token  != undefined ){
             refresh_token = data.refresh_token;
-            localStorage.setItem("refresh_token", refresh_token);
+            sessionStorage.setItem("refresh_token", refresh_token);
         }
         onPageLoad();
     }
@@ -89,8 +89,8 @@ function handleAuthorizationResponse(){
 }
 
 function requestAuthorization(){
-    localStorage.setItem("client_id", client_id);
-    localStorage.setItem("client_secret", client_secret);
+    sessionStorage.setItem("client_id", client_id);
+    sessionStorage.setItem("client_secret", client_secret);
     let url = "https://accounts.spotify.com/authorize";
     url += "?client_id=" + client_id;
     url += "&response_type=code";
