@@ -3,8 +3,6 @@ var client_id = "cbfc4d354b014617b66a9f3225156354";
 var client_secret = "7cd9e2657ff24a09acd76fd5eabdd3e4";
 
 function onPageLoad(){
-    console.log('changes made');
-    console.log(client_id);
     temp_client_id = localStorage.getItem("client_id");
     temp_client_secret = localStorage.getItem("client_secret");
     if (temp_client_id != null) {
