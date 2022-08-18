@@ -11,6 +11,7 @@ function onPageLoad(){
     if (temp_client_secret != null) {
         client_secret = temp_client_secret;
     }
+    console.log(client_id);
     if ( window.location.search.length > 0 ){
         handleRedirect();
     }
