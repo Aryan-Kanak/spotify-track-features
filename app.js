@@ -1,6 +1,6 @@
 var redirect_uri = "";
-var client_id = config.CLIENT_ID;
-var client_secret = config.CLIENT_SECRET;
+var client_id = secret.CLIENT_ID;
+var client_secret = secret.CLIENT_SECRET;
 
 function onPageLoad(){
     temp_client_id = localStorage.getItem("client_id");
