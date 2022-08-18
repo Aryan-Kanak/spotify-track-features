@@ -3,7 +3,6 @@ var client_id = secrets.CLIENT_ID;
 var client_secret = secrets.CLIENT_SECRET;
 
 function onPageLoad(){
-    console.log('this worked');
     temp_client_id = localStorage.getItem("client_id");
     temp_client_secret = localStorage.getItem("client_secret");
     if (temp_client_id != null) {
