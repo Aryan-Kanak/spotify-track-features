@@ -1,0 +1,11 @@
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+#login-button {
+    color:orange;
+    background-color:blue;
+    height: 500px; width: 1000px; font-size: 100px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

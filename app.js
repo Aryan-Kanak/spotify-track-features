@@ -1,4 +1,4 @@
-var redirect_uri = "https://aryan-kanak.github.io/spotify-track-features";
+var redirect_uri = "http://127.0.0.1:5500/index.html";
 var client_id = "cbfc4d354b014617b66a9f3225156354";
 var client_secret = "7cd9e2657ff24a09acd76fd5eabdd3e4";
 
@@ -115,6 +115,7 @@ function search() {
     callApi("GET", 'https://api.spotify.com/v1/search?q=' + trackName + '&type=track', null,
     function() {
         if ( this.status == 200 ){
+            $('#get-features').show();
             let tracks = JSON.parse(this.responseText).tracks.items;
             let menu = document.getElementById("results");
             // remove all current options in dropdown menu

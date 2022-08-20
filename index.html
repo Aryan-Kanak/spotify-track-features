@@ -1,35 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Spotify Web API Project</title>
+        <title>Spotify Track Features</title>
+        <link rel="stylesheet" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
         <script src="app.js"></script>
     </head>
 
     <body onload="onPageLoad()">
-        <div id="login">
-            <input type="button" onclick="requestAuthorization()" value="Login" style="
-            color:orange;
-            background-color:blue;
-            height: 500px; width: 1000px; font-size: 100px;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            margin: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);">
+        <div id="login" class="center">
+            <input id="login-button" type="button" onclick="requestAuthorization()" value="Login">
         </div>
-        <div id="stats">
-            <input id="search" type="text">
-            <input type="button" onclick="search()" value="Search">
-            <br>
-            <select id="results"></select>
-            <input type="button" onclick="getFeatures()" value="Get Features">
-            <br>
+        <div class="center">
+            <div id="stats">
+                <input id="search" type="text">
+                <input type="button" onclick="search()" value="Search">
+                <br>
+                <select id="results"></select>
+                <input type="button" onclick="getFeatures()" value="Get Features" id="get-features" hidden="true">
+                <br>
+                <div id="features"></div>
+            </div>
         </div>
-        <div id="features"></div>
         <script id="features-template" type="text/x-handlebars-template">
             <p>Acousticness: {{acousticness}}</p>
             <p>Danceability: {{danceability}}</p>
