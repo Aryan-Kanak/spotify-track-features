@@ -1,11 +1,68 @@
+body {
+    background-color: #efca66;
+}
+
+h1 {
+    color: #a47053;
+    font-family: "Lexend Zetta";
+}
+
 .center {
     display: flex;
     justify-content: center;
 }
 
 #login-button {
+    height: 500px;
+    width: 1000px;
     color:orange;
-    background-color:blue;
-    height: 500px; width: 1000px; font-size: 100px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-image: linear-gradient(to bottom right, silver, white);
+    border-radius: 100px;
+    font-size: 100px;
+    font-family: "Brush Script MT", cursive;
+}
+
+#search {
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 20px;
+    width: 500px;
+    outline: 0;
+    background-color: #f5f5f5;
+}
+
+#results {
+    width: 500px;
+}
+
+table {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid;
+    padding: 5px;
+}
+
+td:first-child {
+    background-color: grey;
+}
+
+#features {
+    margin: 20px;
+}
+
+.help-text {
+    position: relative;
+}
+
+.help-text:hover:after {
+    position: absolute;
+    content: attr(title);
+    display: inline-block;
+    left: 20px;
+    padding: 5px;
+    background-color: rgba(211, 211, 211, 0.7);
+    color: black;
 }
