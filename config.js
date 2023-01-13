@@ -1,4 +1,4 @@
 var config = {
     CLIENT_ID : "cbfc4d354b014617b66a9f3225156354",
-    CLIENT_SECRET : "7cd9e2657ff24a09acd76fd5eabdd3e4"
+    CLIENT_SECRET : "ff7ad6408af24db4b69e127dd6962f5f"
 }
