@@ -1,6 +1,6 @@
 var redirect_uri = "http://127.0.0.1:5500/index.html";
 var client_id = "cbfc4d354b014617b66a9f3225156354";
-var client_secret = "7cd9e2657ff24a09acd76fd5eabdd3e4";
+var client_secret = "ff7ad6408af24db4b69e127dd6962f5f";
 
 function onPageLoad(){
     temp_client_id = sessionStorage.getItem("client_id");
